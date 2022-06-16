@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="yacoding-xt-sso-api" />
+        <module name="yacoding-xt-sso-service" />
+        <module name="yacoding-xt-web-dao" />
+        <module name="yacoding-xt-web-domain" />
+        <module name="yacoding-xt-admin-service" />
+        <module name="yacoding-xt-admin-api" />
+        <module name="yacoding-xt-web-model" />
+        <module name="yacoding-xt-web-api" />
+        <module name="yacoding-xt-web-service" />
+        <module name="yacoding-xt-admin-model" />
+        <module name="yacoding-xt-common" />
+        <module name="yacoding-xt-sso-model" />
+        <module name="yacoding-xt-common-pojo" />
+        <module name="yacoding-xt-admin-dao" />
+        <module name="yacoding-xt-sso-dao" />
+        <module name="yacoding-xt-admin-domain" />
+        <module name="yacoding-xt-sso-domain" />
+        <module name="yacoding-xt-sso-service-impl" />
+        <module name="yacoding-xt-admin-service-impl" />
+        <module name="yacoding-xt-web-service-impl" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mszlu-xt-web-domain" target="1.8" />
+      <module name="mszlu-xt-web-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mszlu-xt-web-domain" options="-parameters" />
+      <module name="mszlu-xt-web-service" options="-parameters" />
+      <module name="yacoding-xt-admin" options="-parameters" />
+      <module name="yacoding-xt-admin-api" options="-parameters" />
+      <module name="yacoding-xt-admin-dao" options="-parameters" />
+      <module name="yacoding-xt-admin-domain" options="-parameters" />
+      <module name="yacoding-xt-admin-model" options="-parameters" />
+      <module name="yacoding-xt-admin-service" options="-parameters" />
+      <module name="yacoding-xt-admin-service-impl" options="-parameters" />
+      <module name="yacoding-xt-common" options="-parameters" />
+      <module name="yacoding-xt-common-pojo" options="-parameters" />
+      <module name="yacoding-xt-sso" options="-parameters" />
+      <module name="yacoding-xt-sso-api" options="-parameters" />
+      <module name="yacoding-xt-sso-dao" options="-parameters" />
+      <module name="yacoding-xt-sso-domain" options="-parameters" />
+      <module name="yacoding-xt-sso-model" options="-parameters" />
+      <module name="yacoding-xt-sso-service" options="-parameters" />
+      <module name="yacoding-xt-sso-service-impl" options="-parameters" />
+      <module name="yacoding-xt-web" options="-parameters" />
+      <module name="yacoding-xt-web-api" options="-parameters" />
+      <module name="yacoding-xt-web-dao" options="-parameters" />
+      <module name="yacoding-xt-web-domain" options="-parameters" />
+      <module name="yacoding-xt-web-model" options="-parameters" />
+      <module name="yacoding-xt-web-service" options="-parameters" />
+      <module name="yacoding-xt-web-service-impl" options="-parameters" />
+    </option>
+  </component>
+</project>

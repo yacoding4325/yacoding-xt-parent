@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>yacoding-xt-parent</artifactId>
+        <groupId>com.yacoding.xt</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>yacoding-xt-sso</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>yacoding-xt-sso-api</module>
+        <module>yacoding-xt-sso-service</module>
+        <module>yacoding-xt-sso-domain</module>
+        <module>yacoding-xt-sso-service-impl</module>
+        <module>yacoding-xt-sso-dao</module>
+        <module>yacoding-xt-sso-model</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.yacoding.xt</groupId>
+                <artifactId>yacoding-xt-sso-service-impl</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yacoding.xt</groupId>
+                <artifactId>yacoding-xt-sso-service</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yacoding.xt</groupId>
+                <artifactId>yacoding-xt-sso-model</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yacoding.xt</groupId>
+                <artifactId>yacoding-xt-sso-domain</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yacoding.xt</groupId>
+                <artifactId>yacoding-xt-sso-dao</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yacoding.xt</groupId>
+                <artifactId>yacoding-xt-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/yacoding-xt-web/mszlu-xt-web-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/mszlu-xt-web-service/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/yacoding-xt-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/yacoding-xt-web-api/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/yacoding-xt-web-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/yacoding-xt-web-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/yacoding-xt-web-model/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/yacoding-xt-web-service-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/yacoding-xt-web/yacoding-xt-web-service/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

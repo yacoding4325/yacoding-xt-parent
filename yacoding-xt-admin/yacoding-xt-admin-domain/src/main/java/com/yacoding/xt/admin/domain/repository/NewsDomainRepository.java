@@ -24,8 +24,10 @@ import javax.annotation.Resource;
  */
 @Component
 public class NewsDomainRepository {
+
     @Autowired
     public QiniuConfig qiniuConfig;
+
     @Resource
     private NewsMapper newsMapper;
 
@@ -35,7 +37,6 @@ public class NewsDomainRepository {
 
     public Page<News> findNewsPageByCondition(int currentPage, int pageSize, String queryString) {
         Page<News> page = new Page<>(currentPage,pageSize);
-
         LambdaUpdateWrapper<News> queryWrapper = new LambdaUpdateWrapper<>();
         if (StringUtils.isNotBlank(queryString)){
             queryWrapper.like(News::getTitle,queryString);

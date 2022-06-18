@@ -31,11 +31,10 @@ public class SecurityService implements UserDetailsService {
         //3. 拿到用户的密码，组装 security的User对象，剩下的验证工作交给security就可以了
         AdminUserModel adminUser = adminUserService.findUserByUsername(username);
         if (adminUser == null){
-            throw  new UsernameNotFoundException("用户名不存在");
+            throw new UsernameNotFoundException("用户名不存在");
         }
         //加密的密码 BCryptPasswordEncoder加密的
         String password = adminUser.getPassword();
-
         List<GrantedAuthority> authorities = new ArrayList<>();
         User user = new User(username, password, authorities);
         return user;

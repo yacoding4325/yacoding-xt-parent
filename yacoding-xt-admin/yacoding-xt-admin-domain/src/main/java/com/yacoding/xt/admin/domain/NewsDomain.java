@@ -66,7 +66,6 @@ public class NewsDomain {
         int pageSize = this.newsParam.getPageSize();
         String queryString = this.newsParam.getQueryString();
         Page<News> newsPage = newsDomainRepository.findNewsPageByCondition(currentPage,pageSize,queryString);
-
         ListPageModel<NewsModel> listPageModel = new ListPageModel<>();
         List<News> records = newsPage.getRecords();
         List<NewsModel> newsModelList = copyList(records);

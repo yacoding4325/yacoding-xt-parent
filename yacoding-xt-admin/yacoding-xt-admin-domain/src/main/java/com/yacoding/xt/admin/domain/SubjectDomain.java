@@ -39,4 +39,28 @@ public class SubjectDomain {
 //        listModel.setList(result);
         return CallResult.success();
     }
+
+    public CallResult<Object> checkSaveSubjectParam() {
+        return null;
+    }
+
+    public CallResult<Object> checkSaveSubjectBiz() {
+        return null;
+    }
+
+    public CallResult<Object> saveSubject() {
+        return null;
+    }
+
+    public CallResult<Object> findSubjectById() {
+        return null;
+    }
+
+    public CallResult<Object> updateSubject() {
+        return null;
+    }
+
+    public CallResult<Object> allSubjectList() {
+        return null;
+    }
 }

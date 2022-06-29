@@ -24,8 +24,6 @@ public class SubjectServiceImpl extends AbstractService implements SubjectServic
     @Autowired
     private SubjectDomainRepository subjectDomainRepository;
 
-
-
     @Override
     public CallResult findSubjectList(SubjectParam subjectParam) {
         SubjectDomain subjectDomain = this.subjectDomainRepository.createDomain(subjectParam);
@@ -33,6 +31,72 @@ public class SubjectServiceImpl extends AbstractService implements SubjectServic
             @Override
             public CallResult<ListModel> doAction() {
                 return subjectDomain.findSubjectList();
+            }
+        });
+    }
+
+    @Override
+    @Transactional
+    public CallResult saveSubject(SubjectParam subjectParam) {
+        SubjectDomain subjectDomain = this.subjectDomainRepository.createDomain(subjectParam);
+
+        return this.serviceTemplate.execute(new AbstractTemplateAction<Object>() {
+
+            @Override
+            public CallResult<Object> checkParam() {
+                return subjectDomain.checkSaveSubjectParam();
+            }
+
+            @Override
+            public CallResult<Object> checkBiz() {
+                return subjectDomain.checkSaveSubjectBiz();
+            }
+
+            @Override
+            public CallResult<Object> doAction() {
+                return subjectDomain.saveSubject();
+            }
+        });
+    }
+
+    @Override
+    public CallResult findSubjectById(SubjectParam subjectParam) {
+        SubjectDomain subjectDomain = this.subjectDomainRepository.createDomain(subjectParam);
+
+        return this.serviceTemplate.executeQuery(new AbstractTemplateAction<Object>() {
+            @Override
+            public CallResult<Object> doAction() {
+                return subjectDomain.findSubjectById();
+            }
+        });
+    }
+
+    @Override
+    public CallResult updateSubject(SubjectParam subjectParam) {
+        SubjectDomain subjectDomain = this.subjectDomainRepository.createDomain(subjectParam);
+
+        return this.serviceTemplate.execute(new AbstractTemplateAction<Object>() {
+
+            @Override
+            public CallResult<Object> checkParam() {
+                return subjectDomain.checkSaveSubjectParam();
+            }
+
+            @Override
+            public CallResult<Object> doAction() {
+                return subjectDomain.updateSubject();
+            }
+        });
+    }
+
+    @Override
+    public CallResult allSubjectList(SubjectParam subjectParam) {
+        SubjectDomain subjectDomain = this.subjectDomainRepository.createDomain(subjectParam);
+
+        return this.serviceTemplate.executeQuery(new AbstractTemplateAction<Object>() {
+            @Override
+            public CallResult<Object> doAction() {
+                return subjectDomain.allSubjectList();
             }
         });
     }

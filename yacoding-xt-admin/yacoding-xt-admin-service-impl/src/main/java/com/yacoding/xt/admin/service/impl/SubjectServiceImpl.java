@@ -1,8 +1,12 @@
 package com.yacoding.xt.admin.service.impl;
 
 import com.yacoding.xt.admin.domain.SubjectDomain;
+import com.yacoding.xt.admin.domain.TopicDomain;
 import com.yacoding.xt.admin.domain.repository.SubjectDomainRepository;
+import com.yacoding.xt.admin.domain.repository.TopicDomainRepository;
+import com.yacoding.xt.admin.model.TopicModel;
 import com.yacoding.xt.admin.params.SubjectParam;
+import com.yacoding.xt.admin.params.TopicParam;
 import com.yacoding.xt.admin.service.SubjectService;
 import com.yacoding.xt.common.model.CallResult;
 import com.yacoding.xt.common.service.AbstractTemplateAction;
@@ -18,7 +22,6 @@ import javax.swing.*;
  */
 
 @Service
-@Transactional
 public class SubjectServiceImpl extends AbstractService implements SubjectService {
 
     @Autowired
@@ -27,9 +30,10 @@ public class SubjectServiceImpl extends AbstractService implements SubjectServic
     @Override
     public CallResult findSubjectList(SubjectParam subjectParam) {
         SubjectDomain subjectDomain = this.subjectDomainRepository.createDomain(subjectParam);
-        return this.serviceTemplate.executeQuery(new AbstractTemplateAction<ListModel>() {
+
+        return this.serviceTemplate.executeQuery(new AbstractTemplateAction<Object>() {
             @Override
-            public CallResult<ListModel> doAction() {
+            public CallResult<Object> doAction() {
                 return subjectDomain.findSubjectList();
             }
         });

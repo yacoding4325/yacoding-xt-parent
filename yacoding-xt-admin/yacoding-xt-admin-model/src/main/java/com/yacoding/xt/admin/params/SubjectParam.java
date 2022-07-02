@@ -12,22 +12,15 @@ import java.util.List;
 public class SubjectParam {
 
     private Long id;
-
     private String subjectName;
-
     private String subjectGrade;
-
     private String subjectTerm;
-
-    private List<Integer> subjectUnit;
+    private List<Integer> subjectUnits;
 
     private Integer status;
 
-    private int Page = 1;
-
+    private int currentPage = 1;
     private int pageSize = 20;
 
-//    public Integer getPage() {
-//        return null;
-//    }
+    private String queryString;
 }

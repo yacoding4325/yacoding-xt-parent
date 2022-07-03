@@ -1,6 +1,6 @@
 package com.yacoding.xt.sso.service.impl;
 
-import com.yacoding.xt.sso.domain.repository.TokenDomain;
+import com.yacoding.xt.sso.domain.TokenDomain;
 import com.yacoding.xt.sso.domain.repository.TokenDomainRepository;
 import com.yacoding.xt.sso.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,10 @@
-package com.yacoding.xt.sso.domain.repository;
+package com.yacoding.xt.sso.domain;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.yacoding.xt.common.constants.RedisKey;
 import com.yacoding.xt.common.utils.JwtUtil;
 import com.yacoding.xt.sso.domain.LoginDomain;
+import com.yacoding.xt.sso.domain.repository.TokenDomainRepository;
 import lombok.extern.slf4j.Slf4j;
 
 /**

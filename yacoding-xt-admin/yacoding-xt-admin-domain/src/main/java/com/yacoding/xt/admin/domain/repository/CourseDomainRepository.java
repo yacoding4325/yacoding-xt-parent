@@ -70,4 +70,7 @@ public class CourseDomainRepository {
         this.courseSubjectMapper.delete(queryWrapper);
     }
 
+    public Course findCourseById(Long courseId) {
+        return courseMapper.selectById(courseId);
+    }
 }

@@ -40,4 +40,14 @@ public class AdminCourseController {
         return courseService.findPage(courseParam);
     }
 
+    /**
+     * 课程科目学习 学习单元
+     * @param courseParam
+     * @return
+     */
+    @RequestMapping("subjectInfo")
+    public CallResult subjectInfo(@RequestBody CourseParam courseParam) {
+        return courseService.subjectInfo(courseParam);
+    }
+
 }

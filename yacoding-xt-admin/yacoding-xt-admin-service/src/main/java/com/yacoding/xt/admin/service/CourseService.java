@@ -17,4 +17,6 @@ public interface CourseService {
     CallResult findCourseById(CourseParam courseParam);
 
     CallResult findPage(CourseParam courseParam);
+
+    CallResult subjectInfo(CourseParam courseParam);
 }

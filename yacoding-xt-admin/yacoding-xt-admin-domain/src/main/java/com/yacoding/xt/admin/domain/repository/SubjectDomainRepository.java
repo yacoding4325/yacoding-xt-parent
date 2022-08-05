@@ -91,4 +91,11 @@ public class SubjectDomainRepository {
     public List<Subject> findSubjectListByCourseId(Long courseId) {
         return this.subjectMapper.findSubjectListByCourseId(courseId);
     }
+
+    public List<Integer> findSubjectUnit(Long subjectId) {
+        LambdaQueryWrapper<SubjectUnit> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(SubjectUnit::getSubjectId,subjectId);
+        List<SubjectUnit> subjectUnits = subjectUnitMapper.selectList(queryWrapper);
+        return subjectUnits.stream().map(SubjectUnit::getSubjectUnit).collect(Collectors.toList());
+    }
 }

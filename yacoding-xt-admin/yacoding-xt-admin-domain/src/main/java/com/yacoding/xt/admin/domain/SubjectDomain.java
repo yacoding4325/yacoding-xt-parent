@@ -169,4 +169,12 @@ public class SubjectDomain {
         List<Subject> all = this.subjectDomainRepository.findAll();
         return all.stream().map(subject -> subject.getId().toString()).collect(Collectors.toList());
     }
+
+    public List<Integer> findSubjectUnit(Long subjectId) {
+        return subjectDomainRepository.findSubjectUnit(subjectId);
+    }
+
+//    public List<SubjectModel> findSubjectModelListByCourseId(Long courseId) {
+//        return null;
+//    }
 }

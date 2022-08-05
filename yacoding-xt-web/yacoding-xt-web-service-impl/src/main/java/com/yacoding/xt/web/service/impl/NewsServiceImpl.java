@@ -20,13 +20,11 @@ public class NewsServiceImpl extends AbstractService implements NewsService {
     public CallResult newsList(NewsParam newsParam) {
         NewsDomain newsDomain = newsDomainRepository.createDomain(newsParam);
         return this.serviceTemplate.executeQuery(new AbstractTemplateAction<Object>() {
-
             @Override
             public CallResult<Object> checkParam() {
                 //参数检测
                 return newsDomain.checkNewsListParam();
             }
-
             @Override
             public CallResult<Object> doAction() {
                 return newsDomain.newsList();
@@ -38,7 +36,6 @@ public class NewsServiceImpl extends AbstractService implements NewsService {
     public CallResult findNewsById(NewsParam newsParam) {
         NewsDomain newsDomain = newsDomainRepository.createDomain(newsParam);
         return this.serviceTemplate.executeQuery(new AbstractTemplateAction<Object>() {
-
             @Override
             public CallResult<Object> doAction() {
                 return newsDomain.findNewsById();

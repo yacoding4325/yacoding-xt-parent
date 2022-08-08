@@ -65,29 +65,29 @@ public class CourseDomain {
         if (course == null){
             return CallResult.fail(BusinessCodeEnum.TOPIC_PARAM_ERROR.getCode(),"参数错误");
         }
-//        List<SubjectModel> subjectList = this.courseDomainRepository.createSubjectDomain(null).findSubjectModelListByCourseId(courseId);
-//        List<SubjectViewModel> subjectModelList = new ArrayList<>();
-//        for (SubjectModel subject : subjectList){
-////            List<Integer> subjectUnitList = this.courseDomainRepository.createSubjectDomain(null).findSubjectUnit(subject.getId());
-////            SubjectViewModel subjectViewModel = new SubjectViewModel();
-////            subjectViewModel.setId(subject.getId());
-////            subjectViewModel.setSubjectName(subject.getSubjectName()+" "+subject.getSubjectGrade()+" "+subject.getSubjectTerm());
-////            subjectViewModel.setSubjectGrade(subject.getSubjectGrade());
-////            subjectViewModel.setSubjectTerm(subject.getSubjectTerm());
-////            subjectViewModel.setSubjectUnitList(subjectUnitList);
-//
-////            if (userId != null){
-////                UserHistory userHistory = this.courseDomainRepository.createTopicDomain(null).findUserHistory(userId, subject.getId(), HistoryStatus.NO_FINISH.getCode());
-////                if (userHistory != null) {
-////                    String subjectUnits = userHistory.getSubjectUnits();
-////                    if (StringUtils.isNotEmpty(subjectUnits)) {
-////                        List<Integer> strings = JSON.parseArray(subjectUnits, Integer.class);
-////                        subjectViewModel.setSubjectUnitSelectedList(strings);
-////                    }
-////                }
-////            }
-//            subjectModelList.add(subjectViewModel);
-//        }
-//        return CallResult.success(subjectModelList);
+        List<SubjectModel> subjectList = this.courseDomainRepository.createSubjectDomain(null).findSubjectModelListByCourseId(courseId);
+        List<SubjectViewModel> subjectModelList = new ArrayList<>();
+        for (SubjectModel subject : subjectList){
+            List<Integer> subjectUnitList = this.courseDomainRepository.createSubjectDomain(null).findSubjectUnit(subject.getId());
+            SubjectViewModel subjectViewModel = new SubjectViewModel();
+            subjectViewModel.setId(subject.getId());
+            subjectViewModel.setSubjectName(subject.getSubjectName()+" "+subject.getSubjectGrade()+" "+subject.getSubjectTerm());
+            subjectViewModel.setSubjectGrade(subject.getSubjectGrade());
+            subjectViewModel.setSubjectTerm(subject.getSubjectTerm());
+            subjectViewModel.setSubjectUnitList(subjectUnitList);
+
+//            if (userId != null){
+//                UserHistory userHistory = this.courseDomainRepository.createTopicDomain(null).findUserHistory(userId, subject.getId(), HistoryStatus.NO_FINISH.getCode());
+//                if (userHistory != null) {
+//                    String subjectUnits = userHistory.getSubjectUnits();
+//                    if (StringUtils.isNotEmpty(subjectUnits)) {
+//                        List<Integer> strings = JSON.parseArray(subjectUnits, Integer.class);
+//                        subjectViewModel.setSubjectUnitSelectedList(strings);
+//                    }
+//                }
+//            }
+            subjectModelList.add(subjectViewModel);
+        }
+        return CallResult.success(subjectModelList);
     }
 }

@@ -175,6 +175,7 @@ public class SubjectDomain {
     }
 
 //    public List<SubjectModel> findSubjectModelListByCourseId(Long courseId) {
-//        return null;
+//        return subjectParam.getId(courseId);
 //    }
+
 }

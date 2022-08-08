@@ -1,5 +1,6 @@
 package com.yacoding.xt.admin.params;
 
+import com.yacoding.xt.admin.model.SubjectModel;
 import lombok.Data;
 
 import java.util.List;
